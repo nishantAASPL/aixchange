@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-base: #050505;
+  --bg-surface: #0d0d0d;
+  --bg-card: #0a0a0a;
+  --bg-modal: #0c0c0c;
+  --border: #222222;
+  --border-md: #2a2a2a;
+  --border-hv: #555555;
+  --text-1: #ffffff;
+  --text-2: #aaaaaa;
+  --text-3: #888888;
+  --text-4: #666666;
+  --text-5: #555555;
+  --text-6: #444444;
+  --pill-bg: rgba(0, 0, 0, 0.6);
+  --pill-border: rgba(255, 255, 255, 0.1);
+  --accent-light: #e8f0ff;
+  --accent-navy: #1a2744;
+  --accent-navy-light: #2d4a7a;
+}
+
+[data-theme="light"] {
+  --bg-base: #f7f6f2;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-modal: #ffffff;
+  --border: #e8e6e1;
+  --border-md: #dddbd5;
+  --border-hv: #aaa9a5;
+  --text-1: #111111;
+  --text-2: #444444;
+  --text-3: #666666;
+  --text-4: #777777;
+  --text-5: #888888;
+  --text-6: #aaaaaa;
+  --pill-bg: rgba(255, 255, 255, 0.7);
+  --pill-border: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+}
