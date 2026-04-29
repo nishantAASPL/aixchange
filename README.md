@@ -260,7 +260,6 @@ Internal project for Aligned Automation Services Pvt. Ltd.
 
 ## 👤 Authors
 
-- **Design & Development**: Claude Haiku 4.5
 - **Project Lead**: Nishant Mishra (nishant.mishra@alignedautomation.com)
 
 ---
