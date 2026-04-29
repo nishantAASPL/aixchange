@@ -8,6 +8,16 @@ export default function NewsletterPage() {
   const { setCurrentPage, hoveredCard, setHoveredCard } = useApp();
   const [activeFilter, setActiveFilter] = useState('All');
 
+  const handleBackClick = () => {
+    setCurrentPage('home');
+    setTimeout(() => {
+      const el = document.getElementById('newsletter');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   const categories = ['All', ...new Set(newsletters.map(n => n.category))].sort((a, b) => {
     if (a === 'All') return -1;
     if (b === 'All') return 1;
@@ -24,11 +34,11 @@ export default function NewsletterPage() {
       <div className="sticky top-0 z-40 bg-[var(--bg-base)] border-b border-[var(--border)]" style={{ paddingTop: '80px' }}>
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-20 py-8">
           <button
-            onClick={() => setCurrentPage('home')}
+            onClick={handleBackClick}
             className="flex items-center gap-2 text-[var(--text-3)] hover:text-white transition-colors mb-4 text-sm uppercase tracking-widest font-medium"
           >
             <ArrowRight size={16} className="rotate-180" />
-            Back to Home
+            Back
           </button>
           <h1 className="text-5xl md:text-6xl font-bold tracking-tight">AI Newsletter</h1>
         </div>
